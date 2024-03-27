@@ -21,16 +21,16 @@ async def impostor(event):
     inputArgs = event.pattern_match.group(1)
     xx = await edit_or_reply(event, "`Processing...`")
     if "restore" in inputArgs:
-        await event.edit("**Kembali ke identitas asli...**")
+        await event.edit("**Balik lagi ke wujud asli**")
         if not STORAGE.userObj:
-            return await xx.edit("**Anda harus mengclone orang dulu sebelum kembali!**")
+            return await xx.edit("**CLONE DULU ES! BARU BALIK!**")
         await updateProfile(event, STORAGE.userObj, restore=True)
         return await xx.edit("**Berhasil Mengembalikan Akun Anda dari clone**")
     if inputArgs:
         try:
             user = await event.client.get_entity(inputArgs)
         except BaseException:
-            return await xx.edit("**Username/ID tidak valid.**")
+            return await xx.edit("**Username/ID lu ga bener.**")
         userObj = await event.client(GetFullUserRequest(user))
     elif event.reply_to_msg_id:
         replyMessage = await event.get_reply_message()
