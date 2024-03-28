@@ -64,7 +64,7 @@ async def stop_voice(c):
     creator = chat.creator
 
     if not admin and not creator:
-        await edit_delete(c, f"**Maaf {me.first_name} Bukan Admin 👮**")
+        await edit_delete(c, f"**Maaf {me.first_name} Bukan Admin GOBLOK!!!👮**")
         return
     try:
         await c.client(stopvc(await get_call(c)))
@@ -101,10 +101,10 @@ async def change_title(e):
     creator = chat.creator
 
     if not title:
-        return await edit_delete(e, "**Silahkan Masukan Title Obrolan Suara Grup**")
+        return await edit_delete(e, "**APA NAMA TITTLE NYA GBLK**")
 
     if not admin and not creator:
-        await edit_delete(e, f"**Maaf {me.first_name} Bukan Admin 👮**")
+        await edit_delete(e, f"**Maaf {me.first_name} SADAR DIRI BUKAN ADMIN 👮**")
         return
     try:
         await e.client(settitle(call=await get_call(e), title=title.strip()))
@@ -142,7 +142,7 @@ async def _(event):
             )
         except AlreadyJoinedError:
             return await edit_delete(
-                Man, "**INFO:** `akun anda sudah berada di obrolan suara`", 45
+                Man, "**INFO:** `AKUN LU UDAH NAIK DI OS BLOK`", 45
             )
         except Exception as e:
             return await Man.edit(f"**INFO:** `{e}`")
