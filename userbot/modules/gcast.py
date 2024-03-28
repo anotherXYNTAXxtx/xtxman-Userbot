@@ -68,7 +68,7 @@ async def gcast(event):
                 except BaseException:
                     er += 1
     await kk.edit(
-        f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**"
+        f"**UDAH GUA KIRIM KE** `{done}` **GRUP YA BLOK, GAGAL TERKIRIM KE** `{er}` **Grup**"
     )
 
 
