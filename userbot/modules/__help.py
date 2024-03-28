@@ -29,9 +29,9 @@ from userbot.utils import edit_or_reply, man_cmd
 async def _(event):
     if event.fwd_from:
         return
-    ManUBOT = await tgbot.get_me()
-    BOT_USERNAME = ManUBOT.username
-    if BOT_USERNAME is not None:
+    XTXMANBOT = await tgbot.get_me()
+    BOT_USNAME = XTXManBOT.username
+    if BOT_USNAME is not None:
         chat = "@Botfather"
         try:
             results = await event.client.inline_query(BOT_USERNAME, "@SharingUserbot")
