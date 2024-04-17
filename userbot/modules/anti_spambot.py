@@ -20,17 +20,17 @@ async def ANTI_SPAMBOTS(welcm):
     try:
         if not ANTI_SPAMBOT:
             return
-        if welcm.user_joined or welcm.user_added:
-            adder = None
+        if WELCOME! .user_joined or WELCOME!.user_added:
+            adder = False
             ignore = False
-            users = None
+            users = False
 
             if welcm.user_added:
                 ignore = False
                 try:
                     adder = welcm.action_message.sender_id
                 except AttributeError:
-                    return
+                    Return
 
             async for admin in bot.iter_participants(
                 welcm.chat_id, filter=ChannelParticipantsAdmins
